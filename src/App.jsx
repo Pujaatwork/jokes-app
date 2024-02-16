@@ -8,11 +8,9 @@ function App() {
   const [joke, setjoke] = useState("")
 
   const fetchjokes = () => {
-    fetch("https://v2.jokeapi.dev/joke/Any")
-      .then((response) => {
-
-        return response.json()
-      })
+    fetch("https://v2.jokeapi.dev/joke/Any").then((response) => {
+      return response.json()
+    })
       .then((data) => {
         if (data.type === "single") {
           return (setCount(data.joke), setjoke(""))
@@ -32,12 +30,12 @@ function App() {
   }, [])
 
   return (
-    <>
-      <h2>"Tell Me a Joke"</h2>
+    <div className='container'>
+      <h1>"Tell Me a Joke"</h1>
       <p>{count}</p>
       <p>{joke}</p>
       <button onClick={fetchjokes}>change another jokes</button>
-    </>
+    </div>
   )
 
 }
