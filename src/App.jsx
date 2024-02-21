@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 // import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -32,8 +32,9 @@ function App() {
   return (
     <div className='container'>
       <h1>"Tell Me a Joke"</h1>
-      <p>{count}</p>
-      <p>{joke}</p>
+      <hr />
+      <p><b>{joke}</b></p>
+      <p><b>{count}</b></p>
       <button onClick={fetchjokes}>change another jokes</button>
     </div>
   )
