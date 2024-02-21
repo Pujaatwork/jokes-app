@@ -8,7 +8,7 @@ function App() {
   const [joke, setjoke] = useState("")
 
   const fetchjokes = () => {
-    fetch("https://v2.jokeapi.dev/joke/Any").then((response) => {
+    fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit").then((response) => {
       return response.json()
     })
       .then((data) => {
