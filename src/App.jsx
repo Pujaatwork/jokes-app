@@ -24,10 +24,10 @@ function App() {
       })
 
   }
-
   useEffect(() => {
     fetchjokes()
   }, [])
+  
 
   return (
     <div className='container'>
